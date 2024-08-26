@@ -12,7 +12,7 @@ end = '2022-12-31'
 st.title("Stock Trend Prediction")
 
 user_input = st.text_input("Enter Stock Ticker: ", 'AAPL')
-data = yf.download('AAPL', start = start, end = end)
+data = yf.download(user_input, start = start, end = end)
 data.head()
 
 st.subheader("Data from 2010 to 2022")
